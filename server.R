@@ -174,6 +174,14 @@ server <- function(output, input, session){
   })
   
   
+  ### Log out:----
+  observeEvent(input[['sign-out']], {
+    
+    user$logged <- F
+  })
+  
+  
+  
   ### user is previewing her bets:----
   observeEvent(input[["my-bets"]], {
     
@@ -411,5 +419,7 @@ server <- function(output, input, session){
       arrange(match_id)
     
   })
+  
+
   
 }
