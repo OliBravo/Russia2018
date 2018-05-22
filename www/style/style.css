@@ -1,0 +1,187 @@
+
+
+#russia2018-img-container {
+  width: 300px;
+  height: 300px;
+  margin: 50px auto;
+  border: 1px solid black;
+  background-image: url("/russia2018-logo.jpg");
+  background-size: 300px 300px;
+}
+
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+.narrow {
+  width: 40%;
+}
+
+
+#welcome-text p {
+  margin-top: 37px;
+}
+
+
+
+/* login form */
+#login-container {
+  margin: 30px auto;
+  width: 50%;
+}
+
+
+#login-failed {
+  top: 50%;
+  left: 0;
+  display: none;
+  font-size: 0.9em;
+  margin: 25px 0;
+  color: red;
+}
+
+
+#profile {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 50px;
+  z-index: 2000;
+  color: white;
+}
+
+
+#profile span {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  margin: 0 auto;
+  transform: translate(0, -50%);
+}
+
+
+
+#profile:hover #profile-details {
+  display: block;
+}
+
+#profile-details {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: white;
+  border: 2px solid white;
+  padding: 10px 10px;
+  color: black;
+  width: 150%;
+}
+
+
+#profile-details ul>li {
+  list-style: none;
+  padding: 10px 0;
+}
+
+
+.fa-user, .fa-arrow-right, .fa-times {
+  margin-right: 15px;
+}
+
+
+#profile-details .fal {
+  color: #3c8dbc;
+}
+
+
+.user-menu-btn {
+  border: none;
+  background: white;
+}
+
+
+
+#select-new-bet + div.selectize-control {
+  width: 500px;
+  min-width: 450px;
+}
+
+
+#new-bet-single>div>div.container {
+  width: 50%;
+  min-width: 450px;
+  background: #dedede;
+  border-radius: 9px;
+  margin: 30px 0;
+}
+
+
+#new-bet-single div.shiny-input-container {
+  width: 65px;
+}
+
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-left: 0;
+  margin-right: 0;
+  /*align-items: center;*/
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.row span {
+  vertical-align: middle;
+}
+
+
+.center-items {
+  align-items: center;
+}
+
+
+.column6 {
+  float: left;
+  width: 16%;
+  padding: 8px;
+}
+
+
+/*
+#tblNewBetsMatches tbody tr>td:nth-child(1),
+#tblNewBetsMatches thead tr>th:nth-child(1) {
+  display: none;
+}
+
+#tblNewBetsMatches tbody tr>td:nth-child(2) {
+  width: 15px;
+}
+*/
+
+
+#bet-group-phase, #bet-match-id {
+  display: none;
+}
+
+
+div#penalties-container div.shiny-input-container {
+  width: 33%;
+}
+
+
+#btnNewBetSave {
+  width: 150px;
+  background: #420108;
+  color: white;
+}

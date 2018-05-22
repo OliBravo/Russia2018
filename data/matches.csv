@@ -1,0 +1,65 @@
+ID	Group	Date	Time	Country1	Country2	Stadium
+1	A	2018-06-14	17:00	Russia	Saudi Arabia	Luzhniki Stadium, Moscow
+2	A	2018-06-15	14:00	Egypt	Uruguay	Ekaterinburg Arena
+3	B	2018-06-15	20:00	Portugal	Spain	Fisht Stadium, Sochi
+4	B	2018-06-15	17:00	Morocco	Iran	Saint Petersburg Stadium
+5	C	2018-06-16	12:00	France	Australia	Kazan Arena, Kazan
+6	C	2018-06-16	18:00	Peru	Denmark	Mordovia Arena, Saransk
+7	D	2018-06-16	15:00	Argentina	Iceland	Spartak Stadium, Moscow
+8	D	2018-06-16	21:00	Croatia	Nigeria	Kaliningrad Stadium
+9	E	2018-06-17	20:00	Brazil	Switzerland	Rostov Arena
+10	E	2018-06-17	14:00	Costa Rica	Serbia	Samara Arena, Samara
+11	F	2014-06-17	17:00	Germany	Mexico	Luzhniki Stadium, Moscow
+12	F	2018-06-18	14:00	Sweden	South Korea	Nizhny Novgorod Stadium
+13	G	2018-06-18	17:00	Belgium	Panama	Fisht Stadium, Sochi
+14	G	2018-06-18	20:00	Tunisia	England	Volgograd Arena
+15	H	2018-06-19	17:00	Poland	Senegal	Spartak Stadium, Moscow
+16	H	2018-06-19	14:00	Colombia	Japan	Mordovia Arena, Saransk
+17	A	2018-06-19	20:00	Russia	Egypt	Saint Petersburg Stadium
+18	A	2018-06-20	17:00	Uruguay	Saudi Arabia	Rostov Arena
+19	B	2018-06-20	14:00	Portugal	Morocco	Luzhniki Stadium, Moscow
+20	B	2018-06-20	20:00	Iran	Spain	Kazan Arena, Kazan
+21	C	2018-06-21	17:00	France	Peru	Ekaterinburg Arena
+22	C	2018-06-21	14:00	Denmark	Australia	Samara Arena, Samara
+23	D	2018-06-21	20:00	Argentina	Croatia	Nizhny Novgorod Stadium
+24	D	2018-06-22	17:00	Nigeria	Iceland	Volgograd Arena
+25	E	2018-06-22	14:00	Brazil	Costa Rica	Saint Petersburg Stadium
+26	E	2018-06-22	20:00	Serbia	Switzerland	Kaliningrad Stadium
+27	F	2018-06-23	20:00	Germany	Sweden	Fisht Stadium, Sochi
+28	F	2018-06-23	17:00	South Korea	Mexico	Rostov Arena
+29	G	2018-06-23	14:00	Belgium	Tunisia	Spartak Stadium, Moscow
+30	G	2018-06-24	14:00	England	Panama	Nizhny Novgorod Stadium
+31	H	2018-06-24	20:00	Poland	Colombia	Kazan Arena, Kazan
+32	H	2018-06-24	17:00	Japan	Senegal	Ekaterinburg Arena
+33	A	2018-06-25	16:00	Uruguay	Russia	Samara Arena, Samara
+34	A	2018-06-25	16:00	Saudi Arabia	Egypt	Volgograd Arena
+35	B	2018-06-25	20:00	Iran	Portugal	Mordovia Arena, Saransk
+36	B	2018-06-25	20:00	Spain	Morocco	Kaliningrad Stadium
+37	C	2018-06-26	16:00	Denmark	France	Luzhniki Stadium, Moscow
+38	C	2018-06-26	16:00	Australia	Peru	Fisht Stadium, Sochi
+39	D	2018-06-26	20:00	Nigeria	Argentina	Saint Petersburg Stadium
+40	D	2018-06-26	20:00	Iceland	Croatia	Rostov Arena
+41	E	2018-06-27	20:00	Serbia	Brazil	Spartak Stadium, Moscow
+42	E	2018-06-27	20:00	Switzerland	Costa Rica	Nizhny Novgorod Stadium
+43	F	2018-06-27	16:00	South Korea	Germany	Kazan Arena, Kazan
+44	F	2018-06-27	16:00	Mexico	Sweden	Ekaterinburg Arena
+45	G	2018-06-28	19:00	England	Belgium	Kaliningrad Stadium
+46	G	2018-06-28	20:00	Panama	Tunisia	Mordovia Arena, Saransk
+47	H	2018-06-28	16:00	Japan	Poland	Volgograd Arena
+48	H	2018-06-28	16:00	Senegal	Colombia	Samara Arena, Samara
+49	round of 16	2018-06-30	20:00			Fisht Stadium, Sochi
+50	round of 16	2018-06-30	16:00			Kazan Arena
+51	round of 16	2018-07-01	16:00			Moscow - Luzhniki
+52	round of 16	2018-07-01	20:00			Nizhny Novgorod
+53	round of 16	2018-07-02	16:00			Samara Arena
+54	round of 16	2018-07-02	20:00			Rostov Arena
+55	round of 16	2018-07-03	16:00			Saint Petersburg
+56	round of 16	2018-07-03	20:00			Moscow - Spartak
+57	quarter final	2018-07-06	16:00			Nizhny Novgorod
+58	quarter final	2018-07-06	20:00			Kazan Arena
+59	quarter final	2018-07-07	20:00			Fisht Stadium, Sochi
+60	quarter final	2018-07-07	16:00			Samara Arena
+61	semi final	2018-07-10	20:00			Saint Petersburg
+62	semi final	2018-07-11	20:00			Samara Arena
+63	third place	2018-07-14	16:00			Saint Petersburg
+64	final	2018-07-15	17:00			Moscow - Luzhniki
