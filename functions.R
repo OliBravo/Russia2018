@@ -66,16 +66,19 @@ renderUserMenu <- function(){
       id="profile-details",
       
       tags$ul(
+        
         tags$li(
           icon(name = "arrow", class="fal fa-arrow-right"),
           
-          actionLink(label = "My bets", inputId = "my-bets", class="user-menu-btn")),
+          actionLink(label = "My bets", inputId = "my-bets", class="user-menu-btn shiny-bound-input")),
+        
+        
         tags$li(
           class="log-out",
           
           icon(name = "signout", class="fal fa-times log-out"),
           
-          actionLink(label = "Sign out", inputId = "sign-out", class="user-menu-btn"))
+          actionLink(label = "Sign out", inputId = "sign-out"))
       )
     )
   )
@@ -158,10 +161,8 @@ renderNewBet2 <- function(){
     ),
     
     
-    uiOutput(outputId = "new-bet-single"),
+    uiOutput(outputId = "new-bet-single")
     
-    
-    renderUserMenu()
   )
 }
 
