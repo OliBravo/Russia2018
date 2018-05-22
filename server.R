@@ -263,6 +263,9 @@ server <- function(output, input, session){
       
       Matches$already_bet <- rbind(Matches$already_bet,
                                    match_insert)
+      
+      Matches$already_bet <- Matches$already_bet %>%
+        arrange(match_id)
     }
     
     if (MATCH$origin == 'already_bet'){
@@ -336,11 +339,6 @@ server <- function(output, input, session){
       silent = F
       )
     }
-    
-    
-    
-    
-    
   })
   
   
