@@ -7,7 +7,6 @@ library(dplyr)
 library(RODBC)
 library(RODBCext)
 library(DT)
-library(rhandsontable)
 # library(leaflet)
 
 
@@ -72,7 +71,7 @@ ui <- dashboardPage(
     
     
     tags$link(
-      rel = "stylesheet", href = "/style/style.css"
+      rel = "stylesheet", href = "style/style.css"
     ),
     
     tags$link(rel="stylesheet",
