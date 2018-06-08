@@ -88,7 +88,7 @@
 }
 
 
-.fa-user, .fa-arrow-right, .fa-times {
+.fa-user, .fa-arrow-right, .fa-times, .fa-futbol {
   margin-right: 15px;
 }
 
@@ -180,8 +180,13 @@ div#penalties-container div.shiny-input-container {
 }
 
 
-#btnNewBetSave {
+#btnNewBetSave, #btnNewBet {
   width: 150px;
   background: #420108;
   color: white;
+}
+
+
+.admin-hidden {
+  display: none;
 }

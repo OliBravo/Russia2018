@@ -3,6 +3,10 @@
 
 db_connect <- function(login, password){
   
+  
+  # return(TRUE)
+  
+  
   # opens a connection to Russia2018 SQL Server database
   
   if (login == "" | password == ""){
@@ -14,19 +18,33 @@ db_connect <- function(login, password){
   # cnx_string <- "Server = AX212\SQLEXPRESS; Database=Russia2018; Integrated Security=True;"
   
   cnx <- try(
-    # RODBC::odbcConnect(
-    #   "Russia2018"
-    # )
+    
     RODBC::odbcDriverConnect(
-      connection = "Driver={SQL Server};Server=DB3;Database=Russia2018;Uid=Russia2018;Pwd=ek70G1xI9SSSgvZFJ4hG;Trusted_Connection=Yes;"
+      connection = "Driver=SQL Server;
+      Server=myaws-sqlserver.cftriiurha4p.us-west-2.rds.amazonaws.com;
+      Database=Russia2018;
+      Port=1433;
+      Uid=Russia2018;
+      Pwd=ek70G1xI9SSSgvZFJ4hG;
+      "
     )
+    
+    # RODBC::odbcDriverConnect(
+    #   connection = "Driver={SQL Server};
+    #   Server=DB3;
+    #   Database=Russia2018;
+    #   Port=1433;
+    #   Uid=Russia2018;
+    #   Pwd=ek70G1xI9SSSgvZFJ4hG;
+    #   "
+    # )
   )
   
   
   # connection failed:
-  if (class(cnx) == "try-error"){
+  if (class(cnx) == "try-error" | cnx == -1){
     
-    showNotification("Connection error")
+    showNotification(paste("Connection error", cnx))
     
     return(NULL)
     
@@ -62,6 +80,22 @@ db_connect <- function(login, password){
 
 
 queryDB <- function(connection, sql, params = NULL){
+  
+  
+  # return(data.frame(match_id = -999,
+  #                   team1 = "A",
+  #                   team2 = "B",
+  #                   bet1 = 0,
+  #                   bet2 = 0,
+  #                   winner_after_penalties = 0,
+  #                   time = "17:00:00",
+  #                   date = "1999-01-01",
+  #                   user_id = 0,
+  #                   group = "X",
+  #                   group_phase = 0,
+  #                   role = "",
+  #                   team1_regular = 0,
+  #                   team2_regular = 0))
   
   # tries to query the database using RPostgres::dbSendQuery method
   # returns NULL in case of errors
