@@ -14,9 +14,9 @@ renderLoginPage <- function(){
       
       div(
         
-        textInput("txtLogin", "Login", "test"),
+        textInput("txtLogin", "Login", "robert"),
         
-        passwordInput("txtPassword", "Password", "test123"),
+        passwordInput("txtPassword", "Password", "robert123"),
         
         actionButton("btnLogin", type = "button", "Sign In")
       ),
@@ -34,7 +34,7 @@ renderLoginPage <- function(){
 
 
 
-renderAuthorised <- function(){
+renderAuthorised <- function(admin){
   
   # A user has been succesfully authenticated in the database
   
@@ -44,14 +44,21 @@ renderAuthorised <- function(){
     #   "Login succesfull!"
     # ),
     
-    renderNewBet2(),
-    
-    renderUserMenu()
+    renderNewBet2(admin)
   )
 }
 
 
-renderUserMenu <- function(){
+renderUserMenu <- function(admin){
+  
+  
+  # class for styling the admin panel:
+  if (!admin)
+    cls = "admin-hidden"
+  else
+    cls = "admin-visible"
+  
+  
   
   tags$div(
     id="profile",
@@ -72,6 +79,15 @@ renderUserMenu <- function(){
           
           actionLink(label = "My bets", inputId = "my-bets", class="user-menu-btn shiny-bound-input")),
         
+        tags$li(
+          
+          class = cls,
+          
+          icon(name = "footbal", class = "fal fa-futbol"),
+          
+          actionLink(inputId = "lnk-res-admin", label = "Enter results", class="user-menu-btn shiny-bound-input")
+        ),
+        
         
         tags$li(
           class="log-out",
@@ -86,7 +102,7 @@ renderUserMenu <- function(){
 
 
 
-renderMyBets <- function(){
+renderMyBets <- function(admin){
   
   tags$div(
     tags$div(
@@ -104,7 +120,7 @@ renderMyBets <- function(){
     ),
     
     
-    renderUserMenu()
+    renderUserMenu(admin)
   )
 }
 
@@ -143,7 +159,7 @@ renderMyBets <- function(){
 
 
 ### Rendering new bets (new):----
-renderNewBet2 <- function(){
+renderNewBet2 <- function(admin){
   
   tags$div(
     
@@ -161,13 +177,15 @@ renderNewBet2 <- function(){
     ),
     
     
-    uiOutput(outputId = "new-bet-single")
+    uiOutput(outputId = "new-bet-single"),
+    
+    renderUserMenu(admin)
     
   )
 }
 
 
-renderNewBetSingle <- function(match){
+renderNewBetSingle <- function(match, admin){
   
   
   match <- match %>%
@@ -179,8 +197,8 @@ renderNewBetSingle <- function(match){
     pen_win <- NULL
   else
     pen_win <- ifelse(match$winner_after_penalties == 1,
-                    match$team1,
-                    match$team2)
+                    as.character(match$team1),
+                    as.character(match$team2))
   
   
   if ('bet1' %in% colnames(match) & 'bet2' %in% colnames(match)){
@@ -256,17 +274,20 @@ renderNewBetSingle <- function(match){
       
       # tags$div(
         id='penalties-container',
-        
+      
       
         selectInput(
           inputId = 'bet-penalties-winner',
           label = 'Winner after penalties:',
           choices = c(match$team1, match$team2),
-          selected = pen_win
+          selected = ifelse(is.null(pen_win), match$team1, pen_win)
         )
     ),
     
-    actionButton(inputId = "btnNewBetSave", "Save")
+    actionButton(inputId = "btnNewBetSave", "Save")#,
+    
+    
+    # renderUserMenu(admin)
   )
 
 }
@@ -289,4 +310,24 @@ renderStandings <- function(){
     
     "Standings go here..."
   )
+}
+
+
+renderAdminPanel <- function(admin){
+  
+  if (admin){
+    
+    tags$div(
+      "Entering results here",
+      
+      rHandsontableOutput("tblEnterResults"),
+      
+      actionButton("btnResultsSave", "Save"),
+      
+      renderUserMenu(admin)
+    )
+  } else {
+    
+    "You are not allowed to see this page."
+  }
 }

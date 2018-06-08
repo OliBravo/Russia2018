@@ -1,0 +1,13 @@
+name: Russia2018
+title: Russia2018
+username:
+account: jakub-malecki
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 350372
+bundleId: 1411866
+url: https://jakub-malecki.shinyapps.io/Russia2018/
+when: 1528178913.24727
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: matches.R|RL_scoring_worldCup.R|data/group_phase.RData
